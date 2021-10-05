@@ -126,7 +126,7 @@ def indeed_job_data(search_term, start, soup):
 def write_csv(csv_file, csv_columns, dict_data):
     """Generic function for writing result CSV"""
     try:
-        outdir = os.path.dirname(file)
+        outdir = os.path.dirname(csv_file)
         if not os.path.exists(outdir):
             os.mkdir(outdir)
         with open(csv_file, 'w') as csvfile:
